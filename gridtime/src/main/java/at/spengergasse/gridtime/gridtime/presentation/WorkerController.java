@@ -22,7 +22,7 @@ public class WorkerController {
         return ResponseEntity.ok(workerService.findAll());
     }
 
-    @PostMapping
+    @PostMapping(consumes = "application/json")
     public ResponseEntity<WorkerDTO> create(@RequestBody WorkerDTO workerDTO)
     {
         return ResponseEntity.of(workerService.create(workerDTO));
